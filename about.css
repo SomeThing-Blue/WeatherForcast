@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+* {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 15px;
+  font-family: "Madimi One", sans-serif;
+}
+h1 {
+  font-size: 2rem;
+  color: black;
+}
+.head-name {
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 53, 166),
+    rgb(0, 191, 255),
+    rgb(111, 236, 255)
+  );
+  margin: 15px;
+  width: 50%;
+  height: 20px;
+  color: rgb(2, 2, 2);
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+.x {
+  border: 2px solid black;
+  border-radius: 50px;
+  list-style: georgian;
+  margin: 15px 15px 0 0;
+  padding: 10px;
+}
+.x h4 {
+  width: 15%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(67, 238, 250);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 5px;
+}
+.y {
+  margin-top: 0;
+}
+.z {
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+.p {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+.q {
+  margin-top: 0;
+}
+.list {
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+.name {
+  margin: 0;
+  width: 200px;
+  align-content: center;
+  text-align: center;
+}
+.name img {
+  background: rgb(0, 203, 203);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  align-items: center;
+}
+.name-info {
+  margin: 0;
+  width: 150px;
+  text-align: center;
+}
+.p .work {
+  color: white;
+  background-image: linear-gradient(
+    90deg,
+    rgb(0, 7, 69),
+    rgb(1, 42, 156),
+    rgb(0, 7, 69)
+  );
+  width: 400px;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 20px 20px 0 0;
+  margin: 10px 0 10px 0;
+}
+.contact {
+  border: 1px;
+  background: #00207a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+mark {
+  border-radius: 20px;
+  margin: 0 3px 0 3px;
+  padding: 0 3px 0 3px;
+}
+@media (max-width: 1400px) {
+  * {
+    font-size: 1rem;
+  }
+  .x ul h4 {
+    width: 40%;
+    margin: 7px 7px 2px 0;
+  }
+}
+@media (max-width: 1000px) {
+  * {
+    font-size: 0.95rem;
+  }
+  .head-name {
+    margin: 10px 0 10px 0;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+  }
+  .head {
+    margin: 5px 5px 0 0;
+  }
+  .x {
+    margin: 10px 0 0 0;
+  }
+  .x h3 {
+    margin: 10px 0 5px 5px;
+  }
+  .x ul {
+    padding: 0;
+    margin: 10px 0 5px 5px;
+  }
+  .x ul li {
+    margin: 5px 0 7px 7px;
+  }
+  .x ul h4 {
+    width: 40%;
+    margin: 7px 7px 2px 0;
+  }
+  .x ul p {
+    margin: 10px 0 5px 5px;
+  }
+  .z {
+    text-align: center;
+  }
+  .p li {
+    flex-wrap: wrap;
+  }
+  .p.name {
+    margin: 5px 5px 10px 10px;
+  }
+  .list .work {
+    width: 100%;
+    height: 150px;
+    padding: 10px 10px 0 0;
+    margin: 10px 0 10px 0;
+  }
+}
+@media (max-width: 767px) {
+  * {
+    font-size: 0.95rem;
+  }
+  .head-name {
+    margin: 10px 0 10px 0;
+    width: 95%;
+    height: 50px;
+  }
+  h1 {
+    margin: 0;
+  }
+  .head {
+    margin: 5px 5px 0 0;
+  }
+  .x {
+    margin: 10px 0 0 0;
+  }
+  .x h3 {
+    margin: 10px 0 5px 5px;
+  }
+  .x ul {
+    padding: 0;
+    margin: 10px 0 5px 5px;
+  }
+  .x ul li {
+    margin: 5px 0 7px 7px;
+  }
+  .x ul h4 {
+    width: 65%;
+    margin: 7px 7px 2px 0;
+  }
+  .x ul p {
+    margin: 10px 0 5px 5px;
+  }
+  .z {
+    text-align: center;
+  }
+  .p li {
+    flex-wrap: wrap;
+  }
+  .p.name {
+    margin: 5px 5px 10px 10px;
+  }
+  .p .work {
+    width: 100%;
+    height: 150px;
+    padding: 0;
+    margin: 10px 0 10px 0;
+  }
+}

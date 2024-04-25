@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/JavaScript" src="new_weather.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <img src="weather_logo.png" /><span><h1>SKY WATCH</h1></span>
+    </div>
+
+    <div class="navtab">
+      <ul class="navbar-menu">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Alert</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Agriculture</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="weather-input">
+        <h3>Enter City Name</h3>
+        <form class="search-form" action="">
+          <input
+            class="city-input"
+            type="text"
+            placeholder="e.g. Delhi , London , Kolkata , .."
+          />
+          <button class="search-btn" type="submit" onclick="newForcast()">
+            search
+          </button>
+        </form>
+        <div class="loc">
+          <button
+            class="search-location"
+            id="search-location"
+            type="submit"
+            onclick="getLocation()"
+          >
+            Current Coordinate Weather
+          </button>
+        </div>
+        <div class="loc-city-info">
+          <h4 class="name" id="name">City Name</h4>
+          <h4 class="con" id="con11">Condition</h4>
+          <h5 class="info" id="11">Temp</h5>
+          <h5 class="info" id="12">Feel</h5>
+          <h5 class="info" id="13">Wind</h5>
+          <h5 class="info" id="14">Pressure</h5>
+          <h5 class="info" id="15">Humidity</h5>
+          <h5 class="info" id="16">Cloud</h5>
+        </div>
+        <h5 class="city-info" id="city-info">City Details</h5>
+      </div>
+      <div class="weather-data">
+        <h2>Current Weather</h2>
+        <div class="current">
+          <div class="current-info">
+            <h2 class="date2" id="date2">Date</h2>
+            <h2 class="con2" id="con2">Condition</h2>
+          </div>
+          <div class="current-data">
+            <div class="item"><h5 class="info" id="21">Temp</h5></div>
+            <div class="item"><h5 class="info" id="22">Feel</h5></div>
+            <div class="item"><h5 class="info" id="23">wind</h5></div>
+            <div class="item"><h5 class="info" id="24">pressure</h5></div>
+            <div class="item"><h5 class="info" id="25">humidity</h5></div>
+            <div class="item"><h5 class="info" id="26">cloud</h5></div>
+            <div class="item"><h5 class="info" id="27">Precip</h5></div>
+            <div class="item"><h5 class="info" id="28">UV</h5></div>
+          </div>
+        </div>
+        <h2>Hourly forcast for 24hours</h2>
+        <div class="hour">
+          <div class="hour-data">
+            <h4 class="date" id="011">Time</h4>
+            <h4 class="con" id="012">Condition</h4>
+            <h5 class="info" id="013">Temp</h5>
+            <h5 class="info" id="014">Wind</h5>
+            <h5 class="info" id="015">Humidity</h5>
+            <h5 class="info" id="016">Rain</h5>
+            <h5 class="info" id="017">Cloud</h5>
+            <h5 class="info" id="018">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="021">Time</h4>
+            <h4 class="con" id="022">Condition</h4>
+            <h5 class="info" id="023">Temp</h5>
+            <h5 class="info" id="024">Wind</h5>
+            <h5 class="info" id="025">Humidity</h5>
+            <h5 class="info" id="026">Rain</h5>
+            <h5 class="info" id="027">Cloud</h5>
+            <h5 class="info" id="028">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="031">Time</h4>
+            <h4 class="con" id="032">Condition</h4>
+            <h5 class="info" id="033">Temp</h5>
+            <h5 class="info" id="034">Wind</h5>
+            <h5 class="info" id="035">Humidity</h5>
+            <h5 class="info" id="036">Rain</h5>
+            <h5 class="info" id="037">Cloud</h5>
+            <h5 class="info" id="038">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="041">Time</h4>
+            <h4 class="con" id="042">Condition</h4>
+            <h5 class="info" id="043">Temp</h5>
+            <h5 class="info" id="044">Wind</h5>
+            <h5 class="info" id="045">Humidity</h5>
+            <h5 class="info" id="046">Rain</h5>
+            <h5 class="info" id="047">Cloud</h5>
+            <h5 class="info" id="048">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="051">Time</h4>
+            <h4 class="con" id="052">Condition</h4>
+            <h5 class="info" id="053">Temp</h5>
+            <h5 class="info" id="054">Wind</h5>
+            <h5 class="info" id="055">Humidity</h5>
+            <h5 class="info" id="056">Rain</h5>
+            <h5 class="info" id="057">Cloud</h5>
+            <h5 class="info" id="058">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="061">Time</h4>
+            <h4 class="con" id="062">Condition</h4>
+            <h5 class="info" id="063">Temp</h5>
+            <h5 class="info" id="064">Wind</h5>
+            <h5 class="info" id="065">Humidity</h5>
+            <h5 class="info" id="066">Rain</h5>
+            <h5 class="info" id="067">Cloud</h5>
+            <h5 class="info" id="068">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="071">Time</h4>
+            <h4 class="con" id="072">Condition</h4>
+            <h5 class="info" id="073">Temp</h5>
+            <h5 class="info" id="074">Wind</h5>
+            <h5 class="info" id="075">Humidity</h5>
+            <h5 class="info" id="076">Rain</h5>
+            <h5 class="info" id="077">Cloud</h5>
+            <h5 class="info" id="078">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="081">Time</h4>
+            <h4 class="con" id="082">Condition</h4>
+            <h5 class="info" id="083">Temp</h5>
+            <h5 class="info" id="084">Wind</h5>
+            <h5 class="info" id="085">Humidity</h5>
+            <h5 class="info" id="086">Rain</h5>
+            <h5 class="info" id="087">Cloud</h5>
+            <h5 class="info" id="088">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="091">Time</h4>
+            <h4 class="con" id="092">Condition</h4>
+            <h5 class="info" id="093">Temp</h5>
+            <h5 class="info" id="094">Wind</h5>
+            <h5 class="info" id="095">Humidity</h5>
+            <h5 class="info" id="096">Rain</h5>
+            <h5 class="info" id="097">Cloud</h5>
+            <h5 class="info" id="098">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="101">Time</h4>
+            <h4 class="con" id="102">Condition</h4>
+            <h5 class="info" id="103">Temp</h5>
+            <h5 class="info" id="104">Wind</h5>
+            <h5 class="info" id="105">Humidity</h5>
+            <h5 class="info" id="106">Rain</h5>
+            <h5 class="info" id="107">Cloud</h5>
+            <h5 class="info" id="108">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="111">Time</h4>
+            <h4 class="con" id="112">Condition</h4>
+            <h5 class="info" id="113">Temp</h5>
+            <h5 class="info" id="114">Wind</h5>
+            <h5 class="info" id="115">Humidity</h5>
+            <h5 class="info" id="116">Rain</h5>
+            <h5 class="info" id="117">Cloud</h5>
+            <h5 class="info" id="118">UV</h5>
+          </div>
+          <div class="hour-data">
+            <h4 class="date" id="121">Time</h4>
+            <h4 class="con" id="122">Condition</h4>
+            <h5 class="info" id="123">Temp</h5>
+            <h5 class="info" id="124">Wind</h5>
+            <h5 class="info" id="125">Humidity</h5>
+            <h5 class="info" id="126">Rain</h5>
+            <h5 class="info" id="127">Cloud</h5>
+            <h5 class="info" id="128">UV</h5>
+          </div>
+        </div>
+        <h2>Astro Data</h2>
+        <div class="astro">
+          <div class="sun">
+            <div class="sun-info">
+              <img src="sunrise.png" class="image" />
+              <h4 id="sunrise">Sunrise</h4>
+            </div>
+            <div class="sun-info">
+              <img src="sunset.png" class="image" />
+              <h4 id="sunset">Sunset</h4>
+            </div>
+          </div>
+          <div class="moon">
+            <div class="moon-info">
+              <img src="moonrise.png" class="image" /><span
+                ><h4 id="moonrise">Moonrise</h4></span
+              >
+            </div>
+            <div class="moon-info">
+              <img src="moonrise.png" class="image" /><span
+                ><h4 id="moonset">Moonset</h4></span
+              >
+            </div>
+            <div class="moon-info">
+              <img src="moon-phase.png" class="image" /><span
+                ><h4 id="moon_phase">Moon Phase</h4></span
+              >
+            </div>
+            <div class="moon-info">
+              <img src="moon.png" class="image" /><span
+                ><h4 id="illumination">Luminous</h4></span
+              >
+            </div>
+          </div>
+        </div>
+        <h2>4 day forcast</h2>
+        <div class="day">
+          <div class="day-info">
+            <div class="day-current-info">
+              <h2 class="date" id="date31">Date</h2>
+              <h2 class="condition" id="con31">Condition</h2>
+            </div>
+            <div class="day-current-data">
+              <div class="item"><h5 class="info" id="31">Temp</h5></div>
+              <div class="item"><h5 class="info" id="32">Precip</h5></div>
+              <div class="item"><h5 class="info" id="33">wind</h5></div>
+              <div class="item"><h5 class="info" id="34">pressure</h5></div>
+              <div class="item"><h5 class="info" id="35">humidity</h5></div>
+              <div class="item"><h5 class="info" id="36">cloud</h5></div>
+              <div class="item"><h5 class="info" id="37">Rain</h5></div>
+              <div class="item"><h5 class="info" id="38">UV</h5></div>
+            </div>
+          </div>
+          <div class="day-info">
+            <div class="day-current-info">
+              <h2 class="date" id="date41">Date</h2>
+              <h2 class="condition" id="con41">Condition</h2>
+            </div>
+            <div class="day-current-data">
+              <div class="item"><h5 class="info" id="41">Temp</h5></div>
+              <div class="item"><h5 class="info" id="42">Precip</h5></div>
+              <div class="item"><h5 class="info" id="43">wind</h5></div>
+              <div class="item"><h5 class="info" id="44">pressure</h5></div>
+              <div class="item"><h5 class="info" id="45">humidity</h5></div>
+              <div class="item"><h5 class="info" id="46">cloud</h5></div>
+              <div class="item"><h5 class="info" id="47">Rain</h5></div>
+              <div class="item"><h5 class="info" id="48">UV</h5></div>
+            </div>
+          </div>
+          <div class="day-info">
+            <div class="day-current-info">
+              <h2 class="date" id="date51">Date</h2>
+              <h2 class="condition" id="con51">Condition</h2>
+            </div>
+            <div class="day-current-data">
+              <div class="item"><h5 class="info" id="51">Temp</h5></div>
+              <div class="item"><h5 class="info" id="52">Precip</h5></div>
+              <div class="item"><h5 class="info" id="53">wind</h5></div>
+              <div class="item"><h5 class="info" id="54">pressure</h5></div>
+              <div class="item"><h5 class="info" id="55">humidity</h5></div>
+              <div class="item"><h5 class="info" id="56">cloud</h5></div>
+              <div class="item"><h5 class="info" id="57">Rain</h5></div>
+              <div class="item"><h5 class="info" id="58">UV</h5></div>
+            </div>
+          </div>
+          <div class="day-info">
+            <div class="day-current-info">
+              <h2 class="date" id="date61">Date</h2>
+              <h2 class="condition" id="con61">Condition</h2>
+            </div>
+            <div class="day-current-data">
+              <div class="item"><h5 class="info" id="61">Temp</h5></div>
+              <div class="item"><h5 class="info" id="62">Precip</h5></div>
+              <div class="item"><h5 class="info" id="63">wind</h5></div>
+              <div class="item"><h5 class="info" id="64">pressure</h5></div>
+              <div class="item"><h5 class="info" id="65">humidity</h5></div>
+              <div class="item"><h5 class="info" id="66">cloud</h5></div>
+              <div class="item"><h5 class="info" id="67">Rain</h5></div>
+              <div class="item"><h5 class="info" id="68">UV</h5></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
